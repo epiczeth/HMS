@@ -61,6 +61,18 @@
     <Compile Include="GUI\frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmOccupency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmOccupency.Designer.cs">
+      <DependentUpon>frmOccupency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmRooms.Designer.cs">
+      <DependentUpon>frmRooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\SQL.cs" />
@@ -69,6 +81,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmOccupency.resx">
+      <DependentUpon>frmOccupency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmRooms.resx">
+      <DependentUpon>frmRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

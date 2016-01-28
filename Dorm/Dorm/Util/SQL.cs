@@ -41,5 +41,23 @@ namespace Dorm.Util
          }
          return flag;
      }
+     internal int GetNewRoomNumber()
+     {
+         int flag = 1;
+         try
+         {
+             OleDbCommand cmd = new OleDbCommand("select top 1 roomnumber from tb_rooms order by roomnumber desc", GetConnection());
+             OleDbDataReader rd = cmd.ExecuteReader();
+             while (rd.Read())
+             {
+                 flag = (Convert.ToInt32(rd[0]) + 1);
+             }
+         }
+         catch (Exception e)
+         {
+             System.Diagnostics.Debug.WriteLine(e.Message);
+         }
+         return flag;
+     }
     }
 }
