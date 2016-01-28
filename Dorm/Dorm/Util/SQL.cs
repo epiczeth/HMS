@@ -77,5 +77,42 @@ namespace Dorm.Util
          }
          return flag;
      }
+     internal int GetNewSId()
+     {
+         int flag = 1;
+         try
+         {
+             OleDbCommand cmd = new OleDbCommand("select top 1 stid from tb_stubs order by stid desc", GetConnection());
+             OleDbDataReader rd = cmd.ExecuteReader();
+             while (rd.Read())
+             {
+                 flag = (Convert.ToInt32(rd[0]) + 1);
+             }
+         }
+         catch (Exception e)
+         {
+             System.Diagnostics.Debug.WriteLine(e.Message);
+         }
+         return flag;
+     }
+
+     internal int GetNewOwnerID()
+     {
+         int flag = 1;
+         try
+         {
+             OleDbCommand cmd = new OleDbCommand("select top 1 ownerid from tb_owners order by ownerid desc", GetConnection());
+             OleDbDataReader rd = cmd.ExecuteReader();
+             while (rd.Read())
+             {
+                 flag = (Convert.ToInt32(rd[0]) + 1);
+             }
+         }
+         catch (Exception e)
+         {
+             System.Diagnostics.Debug.WriteLine(e.Message);
+         }
+         return flag;
+     }
     }
 }

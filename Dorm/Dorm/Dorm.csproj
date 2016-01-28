@@ -54,6 +54,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsOccu.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsStubs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsStubs.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +83,12 @@
     <Compile Include="GUI\frmRooms.Designer.cs">
       <DependentUpon>frmRooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmStubs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmStubs.Designer.cs">
+      <DependentUpon>frmStubs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\SQL.cs" />
@@ -92,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmRooms.resx">
       <DependentUpon>frmRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmStubs.resx">
+      <DependentUpon>frmStubs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +138,17 @@
     </None>
     <None Include="dsOccu.xss">
       <DependentUpon>dsOccu.xsd</DependentUpon>
+    </None>
+    <None Include="dsStubs.xsc">
+      <DependentUpon>dsStubs.xsd</DependentUpon>
+    </None>
+    <None Include="dsStubs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStubs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsStubs.xss">
+      <DependentUpon>dsStubs.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
